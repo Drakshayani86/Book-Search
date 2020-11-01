@@ -1,0 +1,235 @@
+/* adding background image */
+body {
+ background-image: url("booksearch.jpg");
+ background-color: #cccccc;
+}
+
+html{
+	margin: 0;
+	padding: 0;
+}
+
+/* styling main-container class */
+.main-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items:center;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+/*** top Banner ***/
+.container-banner {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin:-10px;
+	flex-direction: column;
+	width: 100vw;
+	height: 150px;
+	background: rgba(243,243,243,.9);
+  transition: .2s
+}
+
+h1{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2em;
+	padding: 5px 20px;
+  color: navy;
+}
+.letter {
+	font-size: 1.5em;
+}
+
+/*** Search Area ***/
+.search-area{
+	display: flex;
+	flex-direction: row;
+	width: 80vw;
+	height: 50px;
+	padding: 20px;
+	background: white;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: center;
+	top: 10px;
+	margin: 10px;
+	border-radius: 15px;
+	box-shadow: 0px -2px 0px 0px rgba(223,223,223,.9), 2px 8px 25px -10px rgba(0,0,0,0.75);
+  transition: 0.2s ease;
+}
+
+/* input area */
+input {
+  width: 215px;
+  height: 30px;
+  font-size: .8em;
+  text-align: center;
+  border-radius: 0.35rem;
+  border: 3px inset rgba(46,61,73,0.35);
+  margin: 0 100px;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  outline: none; 
+  box-shadow: 0px 20px 7px -15px rgba(0,0,0,.15);
+  transition: all 0.18s ease;
+  color: rgba(46,61,73,0.75);
+}
+
+input::placeholder{
+  color: rgba(163,163,163,.9);
+  font-size: 1em;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/*Button styling*/
+button {
+  width: 200px;
+  outline: none; 
+  height: 40px;
+  border-radius: 50px;
+  background-color: burlywood;
+  border: 0.12rem solid transparent;
+  color: white;
+  box-shadow: 8px 10px 15px 0px rgba(46,61,73,0.25);
+  border-radius: 0.35rem;
+  font-size: .85em;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  box-shadow: 2px 3px 15px 0px rgba(46,61,73,0.45);
+  transition: all 0.4s ease;
+  background-color: grey;
+  cursor:pointer;
+}
+
+/*Result area styling*/
+.result-container {
+  background-color: white;
+}
+
+.hl {
+    background: gray;
+    text-transform: capitalize;
+}
+
+li {
+  text-align: center;
+  margin:0.2em 0;
+  padding:0.5em 0.8em;
+  list-style:none;
+  font-weight: 700;
+  background-color:rgba(243,243,243,.9);
+  border-left:4.5px double rgba(2,179,228,0.75);
+  border-right:4.5px double rgba(2,179,228,0.75);
+  color:#333;
+  position:relative; 
+}
+
+
+/*Recent users : nested ul inside of each book */
+.recentUsers li {
+  text-align: center;
+  margin:0.1em 2em 0.1em 0em;
+  padding:0.2em ;
+  list-style:none;
+  font-weight: 550;
+  background-color:rgba(253,253,253,.7);
+  border: none;
+  color:#333;
+  position:relative;
+  font-size: .9em;
+}
+
+.recentUsers {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.recentUsers li:hover {
+  border-right: 2px solid rgba(183,183,183,.7);
+  cursor: pointer;
+}
+
+/*Book list of books recently visited : nested ul inside of each recent user*/
+.user-book-list li{
+  text-align: center;
+  margin:0.1em 2em 0.1em 0em;
+  padding:0.2em ;
+  list-style:none;
+  font-weight: 550;
+  background-color:rgba(203,203,203,.4);
+  border: none;
+  color:#333;
+  position:relative;
+  font-size: 1.0em;
+}
+
+.conatiner-user-info{
+  position: fixed;
+  z-index: 5;
+  top: 255px;
+  border-radius: 15px;
+  height: auto;
+  width: auto;
+  background: rgba(253,253,253,1);
+  border: 5px solid rgba(203,203,203,.9);
+}
+
+h3 {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/*Icon Styling*/
+.remove {
+  color: rgba(203,203,203,.9);
+  text-align: right;
+  margin: 8px;
+}
+
+.remove:hover {
+  color: rgba(103,103,103,.9);
+  cursor:pointer;
+}
+
+/* media-queries */
+@media screen and (max-width: 1000px) {
+  .search-area {
+    padding: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vw;
+    height: 125px;
+  }
+  input{
+    width: 48vw;
+    border: 2px inset rgba(46,61,73,0.35);
+    margin: 2px auto;
+    height: 25px;
+  }
+  button {
+    width: 48vw; 
+    height: 30px;
+    font-size: .75em;
+    margin: 5px auto;
+  }
+  .search-form {
+    text-align: center;
+  }
+  input:focus {
+    box-shadow: 0px 12px 7px -10px rgba(0,0,0,.15);
+  }
+  .conatiner-user-info{
+  top: 30%;
+}

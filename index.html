@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
+    
+    <!-- title of the document -->
+    <title>Search For a Book</title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+    <!--Hypertext REFrence of font -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+    
+    <!-- Hypertext REFrence ofbuttons -->
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  </head>
+  <body>
+    <!-- main-container class -->
+    <div class="main-container">
+
+      <!-- container-banner class -->
+      <div class="container-banner">
+
+        <!-- Main-Heading of the bot -->
+        <h1>BOOKSEARCH</h1>
+        <!-- Description of the bot -->
+        <h3>This BookSearch Bot helps us to fetch the complete details of a book.It consists of three functions<br> 1)See Full Catalog: displays all the books present in library<br> 2)Search: helps us to find the details using Author or Title of a book 3)Start a new Search: begins a new Search</h3>
+      </div>
+
+      <!-- search-area class -->
+      <div class="search-area">
+
+        <!-- See Full Catalog button -->
+        <button id="btn">See Full Catalog</button>
+
+        <form class="search-form">
+
+          <!-- input area -->
+          <input type="text" class="search" placeholder="Book: Author, Title">
+          
+          <!-- reset-button -->
+          <button id="btn-reset"> Start a new Search</button>
+        </form>
+      </div>
+    
+      <!-- result-container class -->
+      <div class="result-container">
+        <!-- displays data in the from of table -->
+        <table class="table table-stripped">
+          <tbody id = "data"></tbody>  
+        </table>
+      </div>
+	</div>
+    <!-- points to the external script file -->
+    <script src="script.js"></script>
+  </body>
+</html>
